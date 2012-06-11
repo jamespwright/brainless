@@ -1,0 +1,18 @@
+{
+    "name": "Brainless",
+    "version": "0.0.1",
+    "description": "Macro Recorder for Brainless",
+    "background": { "page": "background.html" },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*"],
+        "js": [ "jquery.1.6.1.js", "jsmacro_injected.js" ]
+    }],
+    "permissions": [
+        "http://*/*",
+        "tabs"
+    ]
+}

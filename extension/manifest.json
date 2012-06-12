@@ -9,7 +9,7 @@
     },
     "content_scripts": [{
         "matches": ["http://*/*"],
-        "js": [ "jquery.1.6.1.js", "jsmacro_injected.js" ]
+        "js": [ "lib/jquery.min.js", "injected.js", "lib/underscore.js", "lib/backbone.js", "lib/backstack.js" ]
     }],
     "permissions": [
         "http://*/*",

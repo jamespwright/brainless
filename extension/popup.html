@@ -1,3 +1,33 @@
-<div>
-    Content for Popup Here.
+<script src="lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://localhost:3000/socket.io/socket.io.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/underscore.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/backbone.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/backstack.js" type="text/javascript" charset="utf-8"></script>
+<script src="views.js" type="text/javascript" charset="utf-8"></script>
+<script src="models.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+    var navigator = null;
+    $(document).ready(function(){
+        navigator = new BackStack.StackNavigator({ el:"#container" });
+        navigator.pushView(MainView);
+    });
+</script>
+<style>
+body {
+    height: 100px;
+    width: 100px;
+}
+</style>
+<div id="container">
 </div>
+
+<script type="text/template" id="MainViewTemplate">
+<ul>
+    <a href="#record" class="button"><li>Record!</li></a>
+    <a href="#login" class="button"><li>Login!</li></a>
+</ul>
+</script>
+<script type="text/template" id="LoginViewTemplate">
+<input type="text" name="username" value="" placeholder="username"><br />
+<input type="button" name="login" value="Login">
+</script>
